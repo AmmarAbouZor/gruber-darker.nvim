@@ -32,7 +32,7 @@ M.highlights.cursor_column = Highlight.new("CursorColumn", { bg = c["bg+2"] })
 ---Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 M.highlights.cursor_line = Highlight.new("CursorLine", { bg = c["bg+1"] })
 ---Directory names (and other special names in listings)
-M.highlights.directory = Highlight.new("Directory", { link = gruber_hl.niagara_bold })
+M.highlights.directory = Highlight.new("Directory", { link = gruber_hl.niagara })
 
 ---Diff mode: Added line |diff.txt|
 M.highlights.diff_add = Highlight.new("DiffAdd", { fg = c.green, bg = c.none })
@@ -91,7 +91,7 @@ M.highlights.normal_non_current = Highlight.new("NormalNC", { fg = c.fg, bg = c.
 ---Normal text in sidebar
 M.highlights.normal_sidebar = Highlight.new("NormalSB", { fg = c.fg, bg = c["bg-1"] })
 ---Normal text in floating windows.
-M.highlights.normal_float = Highlight.new("NormalFloat", { fg = c.fg, bg = c["bg+1"] })
+M.highlights.normal_float = Highlight.new("NormalFloat", { fg = c.fg, bg = c.none })
 M.highlights.float_border = Highlight.new("FloatBorder", { fg = c["bg+4"], bg = c.none })
 
 -- Popup
@@ -108,7 +108,7 @@ M.highlights.popup_menu_thumb = Highlight.new("PmenuThumb", { bg = c.bg })
 ---|hit-enter| prompt and yes/no questions
 M.highlights.question = Highlight.new("Question", { fg = c.niagara })
 ---Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-M.highlights.quick_fix_line = Highlight.new("QuickFixLine", { bg = c["bg+2"], bold = opts.bold })
+M.highlights.quick_fix_line = Highlight.new("QuickFixLine", { bg = c["bg+2"] })
 
 -- Search
 
@@ -175,7 +175,7 @@ M.highlights.character = Highlight.new("Character", { fg = c.green, italic = opt
 ---A number constant: 234, 0xff
 M.highlights.number = Highlight.new("Number", { link = gruber_hl.wisteria })
 ---A boolean constant: TRUE, false
-M.highlights.boolean = Highlight.new("Boolean", { link = gruber_hl.yellow_bold })
+M.highlights.boolean = Highlight.new("Boolean", { link = gruber_hl.yellow })
 ---A floating point constant: 2.3e10
 M.highlights.float = Highlight.new("Float", { link = gruber_hl.wisteria })
 ---(preferred) any variable name
@@ -185,17 +185,17 @@ M.highlights.func = Highlight.new("Function", { link = gruber_hl.niagara })
 ---(preferred) any statement
 M.highlights.statement = Highlight.new("Statement", { fg = c.yellow })
 ---If, then, else, endif, switch, etc.
-M.highlights.conditional = Highlight.new("Conditional", { link = gruber_hl.yellow_bold })
+M.highlights.conditional = Highlight.new("Conditional", { link = gruber_hl.yellow })
 ---For, do, while, etc.
-M.highlights.repeats = Highlight.new("Repeat", { link = gruber_hl.yellow_bold })
+M.highlights.repeats = Highlight.new("Repeat", { link = gruber_hl.yellow })
 ---Case,, etc.
-M.highlights.label = Highlight.new("Label", { link = gruber_hl.yellow_bold })
+M.highlights.label = Highlight.new("Label", { link = gruber_hl.yellow })
 ---"sizeof", "+", "*", etc.
 M.highlights.operator = Highlight.new("Operator", { fg = c.fg, italic = opts.italic.operators })
 ---Any other keyword
-M.highlights.keyword = Highlight.new("Keyword", { link = gruber_hl.yellow_bold })
+M.highlights.keyword = Highlight.new("Keyword", { link = gruber_hl.yellow })
 ---Try, catch, throw
-M.highlights.exception = Highlight.new("Exception", { link = gruber_hl.yellow_bold })
+M.highlights.exception = Highlight.new("Exception", { link = gruber_hl.yellow })
 ---(preferred) generic Preprocessor
 M.highlights.pre_proc = Highlight.new("PreProc", { link = gruber_hl.quartz })
 ---Preprocessor #include
@@ -209,11 +209,11 @@ M.highlights.pre_condit = Highlight.new("PreCondit", { link = gruber_hl.quartz }
 ---(preferred) int, long, char, etc.
 M.highlights.type = Highlight.new("Type", { link = gruber_hl.quartz })
 ---Static, register, volatile, etc.
-M.highlights.storage_class = Highlight.new("StorageClass", { link = gruber_hl.yellow_bold })
+M.highlights.storage_class = Highlight.new("StorageClass", { link = gruber_hl.yellow })
 ---Struct, union, enum, etc.
-M.highlights.structure = Highlight.new("Structure", { link = gruber_hl.yellow_bold })
+M.highlights.structure = Highlight.new("Structure", { link = gruber_hl.yellow })
 ---A typedef
-M.highlights.typedef = Highlight.new("Typedef", { link = gruber_hl.yellow_bold })
+M.highlights.typedef = Highlight.new("Typedef", { link = gruber_hl.yellow })
 ---(preferred) any special symbol
 M.highlights.special = Highlight.new("Special", { link = gruber_hl.yellow })
 --- special character in a constant
@@ -223,7 +223,7 @@ M.highlights.tag = Highlight.new("Tag", { link = gruber_hl.yellow })
 ---Character that needs attention
 M.highlights.delimiter = Highlight.new("Delimiter", { link = gruber_hl.fg0 })
 ---Special things inside a comment
-M.highlights.special_comment = Highlight.new("SpecialComment", { link = gruber_hl.wisteria_bold })
+M.highlights.special_comment = Highlight.new("SpecialComment", { link = gruber_hl.wisteria })
 ---Debugging statements
 M.highlights.debug = Highlight.new("Debug", { link = gruber_hl.fg2 })
 
