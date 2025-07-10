@@ -1,3 +1,6 @@
+> **Note**
+> This fork use colors with less contrasts and avoid using bold, keeping it in markdown and in titles only
+
 # gruber-darker.nvim
 
 _A modern Neovim port of a deftheme [adaptation][gruber-darker-theme] of an Emacs
