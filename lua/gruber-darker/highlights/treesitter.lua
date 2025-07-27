@@ -24,9 +24,8 @@ end
 ---Line and block comments
 M.highlights.comment = Highlight.new("@comment", { link = vim_hl.comment })
 ---Comments documenting code
-M.highlights.comment_documentation =
-	Highlight.new("@comment.documentation", { link = gruber_hl.green, italic = opts.italic.comments })
-M.highlights.comment_luadoc = Highlight.new("@comment.luadoc", { link = M.highlights.comment_documentation })
+M.highlights.comment_documentation = Highlight.new("@comment.documentation", { link = vim_hl.comment })
+M.highlights.comment_luadoc = Highlight.new("@comment.luadoc", { link = vim_hl.comment })
 ---Syntax/parser errors
 M.highlights.error = Highlight.new("@error", {})
 ---Completely disable the highlight
